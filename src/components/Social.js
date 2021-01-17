@@ -8,6 +8,7 @@ import spotify from '../images/spotify.svg';
 import apple from '../images/apple.svg';
 import soundcloud from '../images/soundcloud.svg';
 import triplej from '../images/triplej.svg';
+import tiktok from '../images/tiktok.svg';
 
 export default function Social() {
     return (
@@ -35,6 +36,9 @@ export default function Social() {
             </a>
             <a className="hover:opacity-75 transition duration-200 ease-in-out" href="https://www.triplejunearthed.com/artist/joseph-vea" rel="noreferrer" target="_blank">
                 <img src={triplej} alt="Triple J" />
+            </a>
+            <a className="hover:opacity-75 transition duration-200 ease-in-out" href="https://www.tiktok.com/@josephtvea" rel="noreferrer" target="_blank">
+                <img src={tiktok} alt="TikTok" />
             </a>
         </div>
     )

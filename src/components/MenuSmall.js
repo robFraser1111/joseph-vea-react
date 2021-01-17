@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import menu from '../images/menu.svg';
+import menu from '../images/menu.png';
 import { Link } from "react-router-dom";
 
 export default class MenuSmall extends Component {
