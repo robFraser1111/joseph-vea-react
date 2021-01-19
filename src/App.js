@@ -64,7 +64,7 @@ export default class App extends Component {
 
             <footer className="text-center text-white">
               <Social />
-              <p className="py-3">Joseph Vea Music (C) 2020, website powered by <a href="https://roo.digital" target="_blank" rel="noreferrer"><u>RooDigital</u></a></p>
+              <p className="py-3">Joseph Vea Music (C) {new Date().getFullYear()} <br />Website powered by <a href="https://roo.digital" target="_blank" rel="noreferrer"><u>RooDigital</u></a></p>
             </footer>
 
           </div>
