@@ -8,7 +8,7 @@ export default class About extends Component {
     
     render() {
         return (
-            <section className="justify-self-center self-center text-white text-2xl py-10">
+            <section className="justify-self-center self-center text-white text-1xl py-10">
                 <p style={{ paddingBottom: 20 }}>
                     Like many people, I have found myself hooked to my phone and various social media platforms. Whether it be for my music or my personal life, I realised that these things began to take hold of most of my 'free time'. 'Find Me' follows my journey of self-awareness and a commitment to finding out who I am outside of my addiction. This song served as a moment of reflection on who I want to be and how I'd like to use my life.
                     <br /><br />
