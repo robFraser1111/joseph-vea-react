@@ -10,6 +10,7 @@ import About from './components/About';
 import Social from './components/Social';
 import MenuLarge from './components/MenuLarge';
 import MenuSmall from './components/MenuSmall';
+import NotFound from './components/NotFound';
 
 import {
   BrowserRouter as Router,
@@ -51,7 +52,7 @@ export default class App extends Component {
           <div className="grid mx-auto px-4 pb-4 pt-2 max-w-screen-lg">
 
             <MenuLarge />
-            <MenuSmall />
+              <MenuSmall />
 
             <Switch>
               <Route exact path="/" >
@@ -60,6 +61,7 @@ export default class App extends Component {
               <Route path="/about" >
                 <About background={this.backGround} />
               </Route>
+              <Route component={NotFound} ></Route>
             </Switch>
 
             <footer className="text-center text-white">

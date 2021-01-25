@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import menu from '../images/menu.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
 export default class MenuSmall extends Component {
@@ -26,15 +27,19 @@ export default class MenuSmall extends Component {
     return (
         <header className="nav p-6 text-white md:hidden">
 
-          <div className="inline-block text-5xl">
-            <Link to="/" >
-              Joseph Vea
-            </Link>
-          </div>
+          <div className="text-4xl flex justify-between">
 
-          <button onClick={this.showMenu} className="inline-block float-right py-4 w-8 h-8">
-            <img src={menu} alt="Menu" />
-          </button>
+            <div>
+              <Link to="/" >
+                Joseph Vea
+              </Link>
+            </div>
+
+            <div>
+              <FontAwesomeIcon icon={faBars} onClick={this.showMenu} />
+            </div>
+          
+          </div>
 
             { this.state.showMenu ? (
 
