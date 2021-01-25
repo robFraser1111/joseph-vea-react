@@ -23,9 +23,19 @@ export default class App extends Component {
     super(props);
     
     this.state = {
-      background: homeBackground
+      background: homeBackground,
+      showMenu: false
     }
-    
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+  }
+
+  toggleMenu = function() {
+    this.setState({ showMenu: !this.state.showMenu });
+  }
+
+  closeMenu = function() {
+    this.setState({ showMenu: false });
   }
 
   componentDidMount() {
@@ -52,17 +62,17 @@ export default class App extends Component {
           <div className="grid mx-auto px-4 pb-4 pt-2 max-w-screen-lg">
 
             <MenuLarge />
-              <MenuSmall />
-
-            <Switch>
-              <Route exact path="/" >
-                <Home background={this.backGround} />
-              </Route>
-              <Route path="/about" >
-                <About background={this.backGround} />
-              </Route>
-              <Route component={NotFound} ></Route>
-            </Switch>
+            <MenuSmall toggleMenu={this.toggleMenu} showMenu={this.state.showMenu} closeMenu={this.closeMenu} />
+            
+              <Switch>
+                <Route exact path="/">
+                  <Home background={this.backGround}/>
+                </Route>
+                <Route path="/about" >
+                  <About background={this.backGround} />
+                </Route>
+                <Route component={NotFound} ></Route>
+              </Switch>
 
             <footer className="text-center text-white">
               <Social />
